@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import pages from './pages';
+import { Navbar, Header } from './components';
 import './App.css';
 
+const renderRoute = (Comp, props) => (
+  <Route
+    {...Comp.route}
+    component={(routeProps) => <Comp {...{ routeProps, ...props }} />}
+  />
+);
+
 function App() {
+  const [pageTitle, setPageTitle] = useState('butts');
+  const routes = pages.map((Comp) => renderRoute(Comp, { setPageTitle }));
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Navbar />
+        <div className="column">
+          <Header pageTitle={pageTitle} />
+          <main>
+            <Switch>{routes}</Switch>
+          </main>
+        </div>
+      </Router>
     </div>
   );
 }

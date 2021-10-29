@@ -1,0 +1,12 @@
+.nav-container {
+  background-color: lightseagreen;
+  color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 110px;
+}
+
+.nav-item {
+  margin: 15px 0px;
+}
