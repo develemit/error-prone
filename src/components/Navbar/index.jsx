@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './index.css';
+import './index.scss';
 
 const links = [
   {
@@ -22,6 +22,6 @@ const renderLink = ({ title, path }) => (
   </Link>
 );
 
-export default function Navbar() {
+function Navbar() {
   return <nav className="nav-container center">{links.map(renderLink)}</nav>;
 }

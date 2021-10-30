@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 function Home({ setPageTitle }) {
   useEffect(() => {
-    setPageTitle('Welcome Home');
+    setPageTitle();
   }, []);
   return <div>This is the Home Page!</div>;
 }

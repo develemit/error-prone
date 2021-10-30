@@ -13,13 +13,13 @@ const renderRoute = (Comp, props) => (
 
 function App() {
   const [pageTitle, setPageTitle] = useState('butts');
-  const routes = pages.map((Comp) => renderRoute(Comp, { setPageTitle }));
+  const routes = pages.map(Comp => renderRoute(Comp, { setPageTitle }));
   return (
     <div className="App">
       <Router>
         <Navbar />
         <div className="column">
-          <Header pageTitle={pageTitle} />
+          <Header pageTitle={"pageTitle"} />
           <main>
             <Switch>{routes}</Switch>
           </main>
