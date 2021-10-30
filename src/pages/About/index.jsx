@@ -1,18 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const aboutThings = [
-  { title: 'Topic One', checked: true },
-  { title: 'Topic Two', checked: false },
-  { title: 'Topic There', checked: true },
+  { title: "Topic One", checked: true },
+  { title: "Topic Two", checked: false },
+  { title: "Topic There", checked: true },
 ];
 
-function About({ setPageTitle }) {
+export default function About({ setPageTitle }) {
   useEffect(() => {
-    setPageTitle('About');
-  }, []);
+    setPageTitle("About");
+  });
 
   const renderAbouts = aboutThings.map((thing) => {
-    <li key={thing.title}>{thing.title}</li>;
+    return <li key={thing.title}>{thing.title}</li>;
   });
 
   return (
@@ -25,8 +25,6 @@ function About({ setPageTitle }) {
 }
 
 About.route = {
-  path: '/about',
+  path: "/about",
   exact: true,
 };
-
-export default About;
