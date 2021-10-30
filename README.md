@@ -10,7 +10,7 @@ Here is a list of bugs we know about!
 
 2. The Home page should have a Header that says "Welcome Home", but it's not in there!
 
-- (hows you fix this?)
+- (hows you fix this?) The setTitlePage did not have Welcome Home inside of it so it was as simple as adding it in!
 
 3. There should be a list of topics rendering on the about page!
 
