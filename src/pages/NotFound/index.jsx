@@ -1,14 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-function NotFound({ setPageTitle }) {
+export default function NotFound({ setPageTitle }) {
   useEffect(() => {
-    setPageTitle('Are you lost!?');
-  }, []);
+    setPageTitle("Are you lost!?");
+  });
   return <div>Sorry! Page not found!</div>;
 }
 
 NotFound.route = {
-  path: '*',
+  path: "*",
 };
-
-export default NotFound;
