@@ -1,15 +1,14 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-function Home({ setPageTitle }) {
+export default function Home({ setPageTitle }) {
   useEffect(() => {
-    setPageTitle();
-  }, []);
+    setPageTitle("Welcome Home!");
+  });
+
   return <div>This is the Home Page!</div>;
 }
 
 Home.route = {
-  path: '/',
+  path: "/",
   exact: true,
 };
-
-export default Home;
