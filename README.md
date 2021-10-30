@@ -14,8 +14,9 @@ Here is a list of bugs we know about!
 
 3. There should be a list of topics rendering on the about page!
 
-- (hows you fix this?)
+- (hows you fix this?) Needed to put a return before the <li>
 
 4. There is also something that's crashing the app right away!?
+   NavBar needed fixed :)
 
 There's a few other ones in there we haven't documented!
